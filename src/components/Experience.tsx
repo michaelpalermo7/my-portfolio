@@ -1,18 +1,17 @@
 // src/components/Experience.tsx
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import Typography from "@mui/material/Typography";
 
-import image1 from '../assets/cae.jpeg';
-import image2 from '../assets/torc.png';
-import image3 from '../assets/logo3.png';
-import image4 from '../assets/232332.jpg';
-
+import image1 from "../assets/cae.jpeg";
+import image2 from "../assets/torc.png";
+import image3 from "../assets/logo3.png";
+import image4 from "../assets/232332.jpg";
 
 export default function Experience() {
   return (
@@ -27,113 +26,222 @@ export default function Experience() {
           <Timeline position="alternate">
             {/* First experience */}
             <TimelineItem>
-                <TimelineOppositeContent sx={{ color: 'grey.400', opacity: 0.7 , mt: 1}}>
-             Sept 2025 - Dec 2025
-            </TimelineOppositeContent>
+              <TimelineOppositeContent
+                sx={{ color: "grey.400", opacity: 0.7, mt: 1 }}
+              >
+                Sept 2025 - Dec 2025
+              </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
-                sx={{ p: 0, width: 44, height: 44, overflow: 'hidden', bgcolor: 'transparent' }}
+                  sx={{
+                    p: 0,
+                    width: 44,
+                    height: 44,
+                    overflow: "hidden",
+                    bgcolor: "transparent",
+                  }}
                 >
-                    <img
+                  <img
                     src={image1}
                     alt="logo"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
                 </TimelineDot>
-               <TimelineConnector sx={{ height: 220 }} />
+                <TimelineConnector sx={{ height: 220 }} />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: '12px', px: 2 }}>
-                <Typography variant="h6" component="span">
-                  Frontend Developer
-                </Typography>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h1 className="text-md mb-3">
+                  Cybersecurity Operations Specialist
+                </h1>
                 <Typography>
-                  Built responsive web apps with React, Material UI, and TypeScript.
-                  Optimized performance and collaborated with backend teams.
+                  <ul
+                    style={{
+                      margin: 0,
+                      paddingLeft: "1.2rem",
+                      listStylePosition: "outside",
+                    }}
+                  >
+                    <li className="mb-2">
+                      Built KPI dashboards and automated SOC reports, reducing
+                      manual data work and improving visibility.
+                    </li>
+                    <li className="mb-2">
+                      Partnered with SOC analysts to define KPIs that drove
+                      data-driven security decisions.
+                    </li>
+                    <li className="mb-2">
+                      Created PowerBI/SQL visualizations to highlight trends,
+                      detect anomalies, and improve response.
+                    </li>
+                  </ul>
                 </Typography>
               </TimelineContent>
             </TimelineItem>
 
             {/* Second experience */}
             <TimelineItem>
-              <TimelineOppositeContent sx={{ color: 'grey.400', opacity: 0.7, mt: 1}}>
-             Setp 2024 - May 2027
-            </TimelineOppositeContent>
+              <TimelineOppositeContent
+                sx={{ color: "grey.400", opacity: 0.7, mt: 1 }}
+              >
+                Setp 2024 - May 2027
+              </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
-                sx={{ p: 0, width: 44, height: 44, overflow: 'hidden', bgcolor: 'transparent' }}
+                  sx={{
+                    p: 0,
+                    width: 44,
+                    height: 44,
+                    overflow: "hidden",
+                    bgcolor: "transparent",
+                  }}
                 >
-                    <img
+                  <img
                     src={image3}
                     alt="logo"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
                 </TimelineDot>
                 <TimelineConnector sx={{ height: 220 }} />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: '12px', px: 2 }}>
-                <Typography variant="h6" component="span">
-                  UI/UX Designer
-                </Typography>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h1 className="text-md mb-3">BSc Computer Science Co-op</h1>
                 <Typography>
-                  Designed modern, user-friendly interfaces and collaborated closely with developers
-                  to ensure consistent design systems.
+                  <ul
+                    style={{
+                      margin: 0,
+                      paddingRight: "1.2rem",
+                      listStylePosition: "outside",
+                    }}
+                  >
+                    <li className="mb-2">
+                      Member of the Institute of Co-operative Education
+                    </li>
+                    <li className="mb-2">
+                      Relevant Courses: Object Oriented Programming, Data
+                      Structures & Algorithms, Databses, Operating Sysmtes
+                    </li>
+                  </ul>
                 </Typography>
               </TimelineContent>
             </TimelineItem>
 
             {/* Third experience */}
             <TimelineItem>
-                <TimelineOppositeContent sx={{ color: 'grey.400', opacity: 0.7, mt: 1 }}>
-             Apr 2022 - Sept 2022
-            </TimelineOppositeContent>
+              <TimelineOppositeContent
+                sx={{ color: "grey.400", opacity: 0.7, mt: 1 }}
+              >
+                Apr 2022 - Sept 2022
+              </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
-                sx={{ p: 0, width: 44, height: 44, overflow: 'hidden', bgcolor: 'transparent' }}
+                  sx={{
+                    p: 0,
+                    width: 44,
+                    height: 44,
+                    overflow: "hidden",
+                    bgcolor: "transparent",
+                  }}
                 >
-                    <img
+                  <img
                     src={image2}
                     alt="logo"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220 }} />
+                <TimelineConnector sx={{ height: 220, opacity: 0.8 }} />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: '12px', px: 2 }}>
-                <Typography variant="h6" component="span">
-                  Full-Stack Engineer
-                </Typography>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h1 className="text-md mb-3 text-left">Data Annotator</h1>
                 <Typography>
-                  Implemented REST and GraphQL APIs, integrated with frontend apps, and improved CI/CD pipelines.
+                  <ul
+                    style={{
+                      margin: 0,
+                      paddingLeft: "1.2rem",
+                      listStylePosition: "outside",
+                      textAlign: "left",
+                    }}
+                  >
+                    <li className="mb-2">
+                      Annotated over 7,000+ high-resolution frames using CVAT
+                      for training advanced computer vision models, contributing
+                      to improved object detection accuracy.
+                    </li>
+                    <li className="mb-2">
+                      Achieved a 98%+ accuracy rate in annotation quality, as
+                      measured through quality control systems.
+                    </li>
+                    <li className="mb-2">
+                      Awarded ‘Annotator of the Month’ in recognition of
+                      consistent annotation accuracy & attention to detail.
+                    </li>
+                  </ul>
                 </Typography>
               </TimelineContent>
             </TimelineItem>
 
             {/* Fourth experience */}
             <TimelineItem>
-                <TimelineOppositeContent sx={{ color: 'grey.400', opacity: 0.7, mt: 1 }}>
-             Sept 2019 - Dec 2022
-            </TimelineOppositeContent>
+              <TimelineOppositeContent
+                sx={{ color: "grey.400", opacity: 0.7, mt: 1 }}
+              >
+                Sept 2019 - Dec 2022
+              </TimelineOppositeContent>
               <TimelineSeparator>
-               <TimelineDot
-                sx={{ p: 0, width: 44, height: 44, overflow: 'hidden', bgcolor: 'transparent' }}
+                <TimelineDot
+                  sx={{
+                    p: 0,
+                    width: 44,
+                    height: 44,
+                    overflow: "hidden",
+                    bgcolor: "transparent",
+                  }}
                 >
-                    <img
+                  <img
                     src={image4}
                     alt="logo"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220, opacity: 0.7 }} />
+                <TimelineConnector sx={{ height: 220, opacity: 0.6 }} />
               </TimelineSeparator>
-              <TimelineContent sx={{ py: '12px', px: 2 }}>
-                <Typography variant="h6" component="span">
-                  Product Engineer
-                </Typography>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h1 className="text-md mb-3">DEC Business/Commerce General</h1>
                 <Typography>
-                  Shipped features end-to-end, ran A/B tests, and iterated on design based on analytics and user feedback.
+                  <ul
+                    style={{
+                      margin: 0,
+                      paddingRight: "1.2rem",
+                      listStylePosition: "outside",
+                    }}
+                  >
+                    <li className="mb-2">Dean's List 2022 Graduate</li>
+                    <li className="mb-2">
+                      Relevant Courses: Calculus 1, Calculus 2, Linear Algebra
+                    </li>
+                  </ul>
                 </Typography>
               </TimelineContent>
             </TimelineItem>

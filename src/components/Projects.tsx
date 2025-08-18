@@ -2,6 +2,7 @@ import React from "react";
 import image1 from "../assets/data.jpg";
 import image2 from "../assets/comp.jpeg";
 import image3 from "../assets/23234.png";
+import { Chip, Stack } from "@mui/material";
 
 type Project = {
   id: string;
@@ -10,6 +11,7 @@ type Project = {
   blurb: string;
   image: string;
   cta?: { label: string; href: string };
+  tags?: string[];
 };
 
 const PROJECTS: Project[] = [
@@ -21,6 +23,7 @@ const PROJECTS: Project[] = [
       "Building multimodal ML systems to streamline creative workflows: video understanding, generation, and editing.",
     image: image3,
     cta: { label: "Demo Video ↗", href: "#" },
+    tags: ["AI", "Video", "Security"],
   },
   {
     id: "dist-train",
@@ -29,7 +32,11 @@ const PROJECTS: Project[] = [
     blurb:
       "Cross-device training system with model/tensor parallelism to reduce compute for large models.",
     image: image2,
-    cta: { label: "Codebase ↗", href: "#" },
+    cta: {
+      label: "Codebase ↗",
+      href: "https://github.com/michaelpalermo7/QuickGist",
+    },
+    tags: ["ML", "Distributed", "Summarization"],
   },
   {
     id: "ai-city",
@@ -39,6 +46,7 @@ const PROJECTS: Project[] = [
       "City simulation with RL agents to model human behavior and optimize transit routing.",
     image: image1,
     cta: { label: "Project Breakdown ↗", href: "#" },
+    tags: ["Reinforcement Learning", "Simulation", "Sports"],
   },
 ];
 
@@ -84,6 +92,25 @@ const ProjectsSection: React.FC = () => {
               <p className="mt-3 text-sm text-gray-300/80 leading-relaxed">
                 {p.blurb}
               </p>
+
+              {/* Tags */}
+              {p.tags && (
+                <Stack direction="row" spacing={1} className="mt-4 flex-wrap">
+                  {p.tags.map((tag) => (
+                    <Chip
+                      key={tag}
+                      label={tag}
+                      variant="outlined"
+                      size="small"
+                      sx={{
+                        borderColor: "rgba(66, 165, 245)",
+                        color: "rgba(66, 165, 245)",
+                        "&:hover": { borderColor: "white", color: "white" },
+                      }}
+                    />
+                  ))}
+                </Stack>
+              )}
 
               {p.cta && (
                 <a

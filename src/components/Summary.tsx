@@ -1,41 +1,44 @@
-import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+import React from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const socials = [
   {
-    name: 'LinkedIn',
+    name: "LinkedIn",
     icon: <FaLinkedin size={30} />,
-    url: 'https://www.linkedin.com/in/your-linkedin',
+    url: "https://www.linkedin.com/in/michael-palermo-qc",
   },
   {
-    name: 'GitHub',
+    name: "GitHub",
     icon: <FaGithub size={30} />,
-    url: 'https://github.com/your-github',
+    url: "https://github.com/michaelpalermo7",
   },
   {
-    name: 'Gmail',
+    name: "Gmail",
     icon: <MdEmail size={30} />,
-    url: 'mailto:your.email@gmail.com',
+    url: "mikeypalermo7@gmail.com",
   },
 ];
 
 const Summary: React.FC = () => {
   return (
     <div className="relative flex-1 text-left">
-
-      <h1 className="text-4xl leading-tight mb-4 mt-10">
-        Michael Palermo
-      </h1>
+      <h1 className="text-4xl leading-tight mb-4 mt-10">Michael Palermo</h1>
       <p className="text-md max-w-2xl">
-        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect! As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
-        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
+        Hi there! I'm Michael, a Computer Science Co-op student at{" "}
+        <span className="font-bold"> Concordia University</span> with a passion
+        for software and security. I am proficient in{" "}
+        <span className="font-bold">Java</span>, and have experience working
+        with <span className="font-bold">JavaScript, Python, HTML & CSS</span>.
       </p>
-      <br>
-      </br>
+      <br></br>
       <p className="text-md max-w-2xl">
-        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect! As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
-        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
+        In my spare time, I like to work on impactful projects, learn about
+        astronomy and work on my fitness. I'm also passionate about
+        <span className="font-bold">continuous growth</span>, whether that means
+        exploring the latest in cybersecurity, contributing to open-source
+        projects, or building tools that help others. Let's connect and create
+        something meaningful together!
       </p>
 
       <div className="flex gap-6 flex-wrap justify-start mt-6">

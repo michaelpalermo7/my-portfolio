@@ -1,59 +1,102 @@
-import React from 'react';
-import projectlogo from '../assets/projectlogo.png';
-import projectPreview from '../assets/comp.jpeg';
-import vullogo from '../assets/vul.png';
-import projprev2 from '../assets/prev.jpg';
+import React from "react";
+import image1 from "../assets/data.jpg";
+import image2 from "../assets/comp.jpeg";
+import image3 from "../assets/23234.png";
 
-const projects = [
+type Project = {
+  id: string;
+  title: string;
+  year: string;
+  blurb: string;
+  image: string;
+  cta?: { label: string; href: string };
+};
+
+const PROJECTS: Project[] = [
   {
-    name: 'Video Summarizer',
-    description: 'A personal site built with React and Tailwind to showcase my work and skills.',
-    image: projectlogo,
-    preview: projectPreview,
-    url: 'https://github.com/michaelpalermo7/QuickGist',
+    id: "mvs",
+    title: "VULNERABILITY REPORTER",
+    year: "2025",
+    blurb:
+      "Building multimodal ML systems to streamline creative workflows: video understanding, generation, and editing.",
+    image: image3,
+    cta: { label: "Demo Video ↗", href: "#" },
   },
   {
-    name: 'Vulnerability Reporter',
-    description: 'A Node.js app with JWT authentication and file encryption for secure uploads.',
-    image: vullogo,
-    preview: projprev2,
-    url: '#',
+    id: "dist-train",
+    title: "VIDEO SUMMARIZER",
+    year: "2024",
+    blurb:
+      "Cross-device training system with model/tensor parallelism to reduce compute for large models.",
+    image: image2,
+    cta: { label: "Codebase ↗", href: "#" },
+  },
+  {
+    id: "ai-city",
+    title: "VOLLEYBALL DATABASE",
+    year: "2024",
+    blurb:
+      "City simulation with RL agents to model human behavior and optimize transit routing.",
+    image: image1,
+    cta: { label: "Project Breakdown ↗", href: "#" },
   },
 ];
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section className="w-full">
-      <h2 className="text-lg text-left text-gray-500 mb-2">Projects</h2>
-      <hr className="border-t border-gray-400 opacity-30 mb-6 " />
+    <section id="projects" className="max-w-full mx-auto">
+      <div className="mb-6 mt-20">
+        <p className="text-md max-w-full text-left opacity-70">Projects</p>
+        <div className="mt-2 border-b border-white/10" />
+      </div>
 
-      <div className="flex flex-wrap justify-center gap-6 ">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            onClick={() => window.open(project.url, '_blank')}
-            className="relative w-[520px] h-[140px] rounded-xl overflow-hidden shadow-lg cursor-pointer group"
+      {/* Cards */}
+      <div className="max-w-full mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch group/cards">
+        {PROJECTS.map((p) => (
+          <article
+            key={p.id}
+            className="
+              text-left relative overflow-hidden h-full flex flex-col
+              transition-opacity duration-200
+              group-hover/cards:opacity-40 hover:opacity-100
+            "
           >
-            {/* Background preview image as visible content */}
-            <img
-              src={project.preview}
-              alt="Project preview"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-
-            {/* Overlay with dark background */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent z-10 flex flex-col justify-end p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <img
-                  src={project.image}
-                  alt={`${project.name} logo`}
-                  className="w-10 h-10 object-contain rounded-md"
-                />
-                <h3 className="text-xl text-white font-semibold">{project.name}</h3>
-              </div>
-              <p className="text-sm text-gray-200">{project.description}</p>
+            {/* Image */}
+            <div className="aspect-[16/9] overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="h-full w-full object-cover"
+              />
             </div>
-          </div>
+
+            {/* Content */}
+            <div className="mt-10 flex-1 flex flex-col">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-white tracking-[0.12em] text-lg font-semibold">
+                  {p.title}
+                </h3>
+                <span className="text-sm text-gray-400 tabular-nums">
+                  {p.year}
+                </span>
+              </div>
+
+              <p className="mt-3 text-sm text-gray-300/80 leading-relaxed">
+                {p.blurb}
+              </p>
+
+              {p.cta && (
+                <a
+                  href={p.cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto pt-10 text-sm text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white"
+                >
+                  {p.cta.label}
+                </a>
+              )}
+            </div>
+          </article>
         ))}
       </div>
     </section>

@@ -1,31 +1,17 @@
 import React from 'react';
-import Layout from '../layouts/Layout';
-import LeftSection from '../components/LeftSection';
-import RightSection from '../components/RightSection';
-import Experiences from '../components/Experiences';
-import Projects from '../components/Projects'
-import TechStack from '../components/TechStack'
+import Summary from '../components/Summary';
+import Projects from '../components/Projects';
+import Experience from '../components/Experience';
 
 const Home: React.FC = () => {
   return (
-    <Layout>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-start gap-30">
-        <LeftSection />
-        <RightSection />
-      </div>
-
-      <div className="max-w-6xl mx-auto mt-24">
-        <Experiences />
-      </div>
-
-      <div className="max-w-6xl mx-auto mt-24">
+      <div className="max-w-full mt-0 scroll-smooth">
+        
+        <Summary />
         <Projects />
-      </div>
+        <Experience />
 
-      <div className="max-w-6xl mx-auto mt-24">
-        <TechStack />
       </div>
-    </Layout>
   );
 };
 

@@ -20,17 +20,21 @@ const socials = [
   },
 ];
 
-const LeftSection: React.FC = () => {
+const Summary: React.FC = () => {
   return (
     <div className="relative flex-1 text-left">
 
-      <h1 className="text-4xl leading-tight mb-4">
-        Hi, I'm <span style={{ color: '#2e4a9e' }}>Michael Palermo</span>
+      <h1 className="text-4xl leading-tight mb-4 mt-10">
+        Michael Palermo
       </h1>
-      <h2 className="text-xl font-semibold mb-2 text-gray-800">
-        Software & Security Developer
-      </h2>
-      <p className="text-xl text-gray-600 mb-4">
+      <p className="text-md max-w-2xl">
+        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect! As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
+        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
+      </p>
+      <br>
+      </br>
+      <p className="text-md max-w-2xl">
+        As a proficient Java developer, I build web applications that solve real-world problems. Let's connect! As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
         As a proficient Java developer, I build web applications that solve real-world problems. Let's connect!
       </p>
 
@@ -41,7 +45,7 @@ const LeftSection: React.FC = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 opacity-30 hover:opacity-100 transition-opacity duration-300"
+            className="text-gray-100 opacity-30 hover:opacity-100 transition-opacity duration-300"
           >
             {social.icon}
           </a>
@@ -51,4 +55,4 @@ const LeftSection: React.FC = () => {
   );
 };
 
-export default LeftSection;
+export default Summary;

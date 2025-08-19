@@ -8,11 +8,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projects/vulnerability-reporter" element={<VulRep />} />
-      <Route path="/projects/volleyball-database" element={<VollDb />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/vulnerability-reporter" element={<VulRep />} />
+        <Route path="/projects/volleyball-database" element={<VollDb />} />
+      </Routes>
+    </Router>
   );
 };
 

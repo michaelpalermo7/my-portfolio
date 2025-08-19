@@ -7,6 +7,8 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import image1 from "../assets/cae.jpeg";
 import image2 from "../assets/torc.png";
@@ -14,6 +16,9 @@ import image3 from "../assets/logo3.png";
 import image4 from "../assets/232332.jpg";
 
 export default function Experience() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <section id="experience" className="max-w-full mx-auto">
       <div>
@@ -22,8 +27,22 @@ export default function Experience() {
           <div className="mt-2 border-b border-white/10" />
         </div>
 
-        <div className="mt-10 ">
-          <Timeline position="alternate">
+        <div className="mt-10">
+          <Timeline
+            position={isMobile ? "right" : "alternate"}
+            sx={{
+              "& .MuiTimelineOppositeContent-root": {
+                display: { xs: "none", sm: "block" },
+              },
+              "& .MuiTimelineItem-root:before": { flex: 0, padding: 0 },
+              "& .MuiTimelineContent-root ul": {
+                margin: 0,
+                paddingInlineStart: "1.2rem", // logical property works LTR/RTL
+                paddingInlineEnd: 0,
+                listStylePosition: "outside",
+              },
+            }}
+          >
             {/* First experience */}
             <TimelineItem>
               <TimelineOppositeContent
@@ -31,6 +50,7 @@ export default function Experience() {
               >
                 Sept 2025 - Dec 2025
               </TimelineOppositeContent>
+
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
@@ -53,8 +73,9 @@ export default function Experience() {
                     }}
                   />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220 }} />
+                <TimelineConnector sx={{ height: { xs: "auto", sm: 220 } }} />
               </TimelineSeparator>
+
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <h1 className="text-md mb-3">
                   Cybersecurity Operations Specialist
@@ -63,7 +84,6 @@ export default function Experience() {
                   <ul
                     style={{
                       margin: 0,
-                      paddingLeft: "1.2rem",
                       listStylePosition: "outside",
                     }}
                   >
@@ -78,8 +98,9 @@ export default function Experience() {
               <TimelineOppositeContent
                 sx={{ color: "grey.400", opacity: 0.7, mt: 1 }}
               >
-                Setp 2024 - May 2027
+                Sept 2024 - May 2027
               </TimelineOppositeContent>
+
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
@@ -102,8 +123,9 @@ export default function Experience() {
                     }}
                   />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220 }} />
+                <TimelineConnector sx={{ height: { xs: "auto", sm: 220 } }} />
               </TimelineSeparator>
+
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <h1 className="text-md mb-3">BSc Computer Science Co-op</h1>
                 <Typography>
@@ -118,8 +140,8 @@ export default function Experience() {
                       Member of the Institute of Co-operative Education
                     </li>
                     <li className="mb-2">
-                      Relevant Courses: Object Oriented Programming, Data
-                      Structures & Algorithms, Databses, Operating Sysmtes
+                      Relevant Courses: Object-Oriented Programming, Data
+                      Structures &amp; Algorithms, Databases, Operating Systems
                     </li>
                   </ul>
                 </Typography>
@@ -133,6 +155,7 @@ export default function Experience() {
               >
                 Apr 2022 - Sept 2022
               </TimelineOppositeContent>
+
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot
@@ -155,15 +178,15 @@ export default function Experience() {
                     }}
                   />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220, opacity: 0.8 }} />
+                <TimelineConnector sx={{ height: { xs: "auto", sm: 220 } }} />
               </TimelineSeparator>
+
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <h1 className="text-md mb-3 text-left">Data Annotator</h1>
                 <Typography>
                   <ul
                     style={{
                       margin: 0,
-                      paddingLeft: "1.2rem",
                       listStylePosition: "outside",
                       textAlign: "left",
                     }}
@@ -179,7 +202,7 @@ export default function Experience() {
                     </li>
                     <li className="mb-2">
                       Awarded ‘Annotator of the Month’ in recognition of
-                      consistent annotation accuracy & attention to detail.
+                      consistent annotation accuracy &amp; attention to detail.
                     </li>
                   </ul>
                 </Typography>
@@ -193,6 +216,7 @@ export default function Experience() {
               >
                 Sept 2019 - Dec 2022
               </TimelineOppositeContent>
+
               <TimelineSeparator>
                 <TimelineDot
                   sx={{
@@ -214,8 +238,9 @@ export default function Experience() {
                     }}
                   />
                 </TimelineDot>
-                <TimelineConnector sx={{ height: 220, opacity: 0.6 }} />
+                <TimelineConnector sx={{ height: { xs: "auto", sm: 220 } }} />
               </TimelineSeparator>
+
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <h1 className="text-md mb-3">DEC Business/Commerce General</h1>
                 <Typography>
@@ -226,7 +251,7 @@ export default function Experience() {
                       listStylePosition: "outside",
                     }}
                   >
-                    <li className="mb-2">Dean's List 2022 Graduate</li>
+                    <li className="mb-2">Dean&apos;s List 2022 Graduate</li>
                     <li className="mb-2">
                       Relevant Courses: Calculus 1, Calculus 2, Linear Algebra
                     </li>

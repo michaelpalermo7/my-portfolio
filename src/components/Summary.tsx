@@ -34,7 +34,7 @@ const Summary: React.FC = () => {
       <br></br>
       <p className="text-md max-w-2xl">
         In my spare time, I like to work on impactful projects, learn about
-        astronomy and work on my fitness. I'm also passionate about
+        astronomy and work on my fitness. I'm also passionate about{" "}
         <span className="font-bold">continuous growth</span>, whether that means
         exploring the latest in cybersecurity, contributing to open-source
         projects, or building tools that help others. Let's connect and create

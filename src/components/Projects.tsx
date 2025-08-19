@@ -16,37 +16,43 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    id: "mvs",
+    id: "vul-rep",
     title: "VULNERABILITY REPORTER",
     year: "2025",
     blurb:
-      "Building multimodal ML systems to streamline creative workflows: video understanding, generation, and editing.",
+      "A security tool that tracks, organizes, and reports software vulnerabilities with an intuitive dashboard and automated workflows.",
     image: image3,
-    cta: { label: "Demo Video ↗", href: "#" },
-    tags: ["AI", "Video", "Security"],
+    cta: {
+      label: "Project Breakdown ↗",
+      href: "/projects/vulnerability-reporter",
+    },
+    tags: ["Python", "Dash", "SQL"],
   },
   {
-    id: "dist-train",
+    id: "vid-sum",
     title: "VIDEO SUMMARIZER",
-    year: "2024",
+    year: "2025",
     blurb:
-      "Cross-device training system with model/tensor parallelism to reduce compute for large models.",
+      "A youtube transcript summarizer that leverages OpenAI's API to turn long format video content into digestible summaries",
     image: image2,
     cta: {
       label: "Codebase ↗",
       href: "https://github.com/michaelpalermo7/QuickGist",
     },
-    tags: ["ML", "Distributed", "Summarization"],
+    tags: ["OpenAI", "React", "TypeScript", "Node"],
   },
   {
-    id: "ai-city",
-    title: "VOLLEYBALL DATABASE",
-    year: "2024",
+    id: "mvc-db",
+    title: "MVC DATABASE APPLICATION",
+    year: "2025",
     blurb:
-      "City simulation with RL agents to model human behavior and optimize transit routing.",
+      "A full-stack database application for the Montreal Volleyball Club. Features a relational database schema with integrity constraints & GUI.",
     image: image1,
-    cta: { label: "Project Breakdown ↗", href: "#" },
-    tags: ["Reinforcement Learning", "Simulation", "Sports"],
+    cta: {
+      label: "Project Breakdown ↗",
+      href: "/projects/volleyball-database",
+    },
+    tags: ["MySQL", "JavaScript", "Team Collaboration"],
   },
 ];
 
@@ -54,7 +60,9 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="max-w-full mx-auto">
       <div className="mb-6 mt-20">
-        <p className="text-md max-w-full text-left opacity-70">Projects</p>
+        <p className="text-md max-w-full text-left opacity-70">
+          Featured Projects
+        </p>
         <div className="mt-2 border-b border-white/10" />
       </div>
 

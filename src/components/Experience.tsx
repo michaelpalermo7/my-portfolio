@@ -67,18 +67,7 @@ export default function Experience() {
                       listStylePosition: "outside",
                     }}
                   >
-                    <li className="mb-2">
-                      Built KPI dashboards and automated SOC reports, reducing
-                      manual data work and improving visibility.
-                    </li>
-                    <li className="mb-2">
-                      Partnered with SOC analysts to define KPIs that drove
-                      data-driven security decisions.
-                    </li>
-                    <li className="mb-2">
-                      Created PowerBI/SQL visualizations to highlight trends,
-                      detect anomalies, and improve response.
-                    </li>
+                    <li className="mb-2">Fall 2025</li>
                   </ul>
                 </Typography>
               </TimelineContent>

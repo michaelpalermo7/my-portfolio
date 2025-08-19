@@ -8,9 +8,7 @@ import image6 from "../assets/volldb/db6.png";
 import image7 from "../assets/volldb/db7.png";
 import image8 from "../assets/volldb/db8.png";
 import image9 from "../assets/volldb/db9.png";
-import { Button } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Link } from "react-router-dom";
+import FancyButton from "../components/FancyButton";
 
 const VollDb: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("overview");
@@ -72,16 +70,7 @@ const VollDb: React.FC = () => {
           <p className="text-md max-w-full text-left opacity-70 ">
             Project Case Study
           </p>
-          <Button
-            component={Link}
-            to="/"
-            startIcon={<ArrowBackIcon />}
-            variant="text"
-            size="small"
-            className="relative top-[4px]"
-          >
-            Back
-          </Button>
+          <FancyButton label="< BACK" href="/" />
         </div>
 
         {/* Horizontal line under both */}

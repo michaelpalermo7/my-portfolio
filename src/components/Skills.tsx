@@ -1,7 +1,7 @@
 import { Chip, Stack } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import FancyButton from "./FancyButton";
 
 const languages = ["Java", "JavaScript", "Python", "HTML", "CSS", "SQL"];
 const frameworks = ["React", "TailwindCSS", "Node", "Express"];
@@ -95,48 +95,10 @@ export default function SkillsSection() {
       {/*Button*/}
       <div className="mb-20">
         <Box display="flex" justifyContent="center" alignItems="center" mt={10}>
-          <Button
-            variant="text"
-            color="info"
+          <FancyButton
+            label="Get In Touch"
             href="mailto:mikeypalermo7@gmail.com"
-            sx={{
-              position: "relative",
-              overflow: "hidden",
-              transition: "color 0.3s ease",
-
-              "&::after": {
-                content: '""',
-                position: "absolute",
-                left: "50%",
-                bottom: 0,
-                transform: "translateX(-50%) scaleX(0)",
-                transformOrigin: "center",
-                width: "100%",
-                height: "2px",
-                backgroundColor: "currentColor",
-                transition: "transform 0.3s ease",
-              },
-
-              "&:hover": {
-                color: "#ffffff", // matches your chip blue
-              },
-
-              "&:hover::after": {
-                transform: "translateX(-50%) scaleX(1)", // underline expands
-              },
-
-              "& span": {
-                display: "inline-block",
-                transition: "transform 0.3s ease",
-              },
-
-              "&:hover span": {
-                transform: "translateY(-3px)", // text lifts slightly
-              },
-            }}
-          >
-            Get In Touch
-          </Button>
+          />
         </Box>
       </div>
     </section>

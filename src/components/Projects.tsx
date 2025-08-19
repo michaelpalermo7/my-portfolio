@@ -123,7 +123,6 @@ const ProjectsSection: React.FC = () => {
               {p.cta && (
                 <a
                   href={p.cta.href}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto pt-10 text-sm text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white"
                 >

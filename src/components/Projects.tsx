@@ -70,7 +70,6 @@ const ProjectsSection: React.FC = () => {
         <div className="mt-2 border-b border-white/10" />
       </div>
 
-      {/* Cards */}
       <div className="max-w-full mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch group/cards">
         {PROJECTS.map((p) => (
           <article
@@ -90,7 +89,6 @@ const ProjectsSection: React.FC = () => {
               />
             </div>
 
-            {/* Content */}
             <div className="mt-10 flex-1 flex flex-col">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-white tracking-[0.12em] text-lg font-semibold">
@@ -105,7 +103,6 @@ const ProjectsSection: React.FC = () => {
                 {p.blurb}
               </p>
 
-              {/* Tags */}
               {p.tags && (
                 <Stack direction="row" spacing={1} className="mt-4 flex-wrap">
                   {p.tags.map((tag) => (
@@ -124,15 +121,30 @@ const ProjectsSection: React.FC = () => {
                 </Stack>
               )}
 
-              {p.cta && (
-                <a
-                  href={p.cta.href}
-                  rel="noopener noreferrer"
-                  className="mt-auto pt-10 text-sm text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white"
-                >
-                  {p.cta.label}
-                </a>
-              )}
+              <div className="mt-auto pt-10 flex gap-6 flex-wrap">
+                {p.ctas
+                  ? p.ctas.map((btn) => (
+                      <a
+                        key={btn.href}
+                        href={btn.href}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="text-sm text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white"
+                      >
+                        {btn.label}
+                      </a>
+                    ))
+                  : p.cta && (
+                      <a
+                        href={p.cta.href}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="text-sm text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white"
+                      >
+                        {p.cta.label}
+                      </a>
+                    )}
+              </div>
             </div>
           </article>
         ))}

@@ -11,6 +11,7 @@ type Project = {
   blurb: string;
   image: string;
   cta?: { label: string; href: string };
+  ctas?: { label: string; href: string }[];
   tags?: string[];
 };
 
@@ -35,10 +36,13 @@ const PROJECTS: Project[] = [
     blurb:
       "A youtube transcript summarizer that leverages OpenAI's API to turn long format video content into digestible summaries",
     image: image2,
-    cta: {
-      label: "Codebase ↗",
-      href: "https://github.com/michaelpalermo7/QuickGist",
-    },
+    ctas: [
+      {
+        label: "Codebase ↗",
+        href: "https://github.com/michaelpalermo7/QuickGist",
+      },
+      { label: "Website ↗", href: "https://quick-gist-ten.vercel.app/" },
+    ],
     tags: ["OpenAI", "React", "TypeScript", "Node"],
   },
   {
